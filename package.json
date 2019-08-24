@@ -1,13 +1,33 @@
 {
   "name": "test-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "v12.9.0",
+    "npm": "5.4.2"
+  },
   "description": "",
   "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express-favicon": "^2.0.1",
+    "lodash": "^4.17.5",
+    "materialize-css": "^0.100.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "serve": "^9.4.0"
+  },
   "scripts": {
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "cd react-app && npm run build",
-    "heroku-postbuild": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./express-api/bin/www"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
